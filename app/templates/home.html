@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+{% block content %}
+
+<h1>Please fill your admission then upload your photo</h1>
+<form enctype="multipart/form-data" method="POST">
+    {% csrf_token %}
+    ADMISSION NUMBER <br> <br>
+    <input type="datetime" name="admission" required>
+    <br><br><br>
+    UPLOAD PHOTO <br><br>
+</form>
+<input type="file" > <a href="{% url 'upload'%}">UPLOAD</a>
+
+<br><br>
+<input style="border-radius: 10px;background-color: blue ;margin: 0%auto;text-align: center;" 
+type="submit" name="submit" value="submit" required>
+
+{% endblock %}
